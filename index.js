@@ -23,7 +23,6 @@ const routes = {
 };
 
 function render(route) {
-  if (!route) route = routes[window.location.pathname];
   mainApp.innerHTML = routes[route].component();
 }
 
@@ -46,6 +45,7 @@ function navigationHander(e) {
 
 const renderInitialPage = () => {
   const route = window.location.pathname;
+  console.log(route);
   render(route);
 };
 navLinksRenderer();
