@@ -23,6 +23,7 @@ const routes = {
 };
 
 function render(route) {
+  if (!route) route = routes[window.location.pathname];
   mainApp.innerHTML = routes[route].component();
 }
 
